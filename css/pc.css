@@ -154,6 +154,20 @@ select, option {
     margin-bottom: 20px;
   }
 
+  main section.container .text-box:hover {
+    background: var(--main-color);
+    color: #fff;
+    transition: 1s;
+    transform: scale(95%);
+  }
+
+  main section.container .text-box:hover a {
+    transition: 1s;
+    color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }
+
   .detail-btn {
     display: block;
     margin-top: 40px;
