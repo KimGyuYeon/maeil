@@ -13,3 +13,16 @@ $(function(){
     });
 });
 
+$(function(){
+  $('#gnb > ul').mouseover(function(){
+      $('#gnb > ul > li > .depth2').addClass('on');
+  })
+ 
+  $('#gnb > ul > li > .depth2').mouseleave(function(){
+     $('#gnb .depth2').removeClass('on');
+ })
+
+ $('#main-visual').mouseover(function(){
+   $('#gnb > ul > li > .depth2').removeClass('on');
+ })
+})

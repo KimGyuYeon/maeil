@@ -11,11 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/pc.css" media="screen and (min-width:768px)">
-    <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width:768px)">
+    <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width:768px)">    
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- 사이트를 배포할때 필요한 정보들 SEO -->
     <!-- 사이트 소개글 -->
@@ -32,35 +35,11 @@
 
 </head>
 <body>    
-    <header id="main-header" class="container">
-        <h1><a href="./"><img src="./images/logo.png" alt="남양로고"></a></h1>
-        <nav id="gnb">
-            <ul>
-                <li><a href="#">회사소개</a></li>
-                <li><a href="#">제품소개</a></li>
-                <li><a href="#">지속가능경영</a></li>
-                <li><a href="#">IR</a></li>
-                <li><a href="#">PR</a></li>
-            </ul>
-        </nav>       
-
-        <div class="right-menu">        
-            <button id="searh-btn" class="pc-only">
-                <img src="./images/search.svg" alt="search">
-            </button>
-            <select name="Language" id="Language" class="pc-only">
-                <option value="">Korean</option>
-                <option value="">English</option>
-                <option value="">Chinese</option>
-            </select>
     
-            <!-- 모바일용 토글버튼 -->
-            <button id="gnb-toggle-btn" class="mobile-only">
-                <img src="./images/m-toggle.svg" alt="toggle-btn">
-            </button>
-        </div>
-    </header>
-
+    <!--해더-->
+    <div class="header-component">
+        <script src="./components/header.js"></script>
+    </div>
 
     <!-- 슬라이더 컨테이너 -->
     <div id="main-visual" class="swiper">
@@ -82,18 +61,18 @@
     <!-- 메인콘텐츠 -->
     <main>
         <section id="content1" class="container">
-            <img src="./images/img1.jpg" alt="img1">
+            <img src="./images/img1.jpg" alt="img1" data-aos="flip-left">
             <div class="text-box">
                 <div class="text-box-inner">
                     <h2>Since 1969</h2>
                     <p>지난 50년간 건강한 식문화를 위해서<br>
                         한길을 걸어왔습니다</p>
-                    <a href="#" class="detail-btn">기업소개 바로가기</a>
+                    <a href="company-info.html" class="detail-btn">기업소개 바로가기</a>
                 </div>                
             </div>           
         </section>
         <section id="content2" class="container">
-            <img src="./images/img2.jpg" alt="img2">
+            <img src="./images/img2.jpg" alt="img2" data-aos="flip-left">
             <div class="text-box">
                 <div class="text-box-inner">
                     <h2>신선함을 매일</h2>
@@ -104,7 +83,7 @@
             </div>           
         </section>
         <section id="content3" class="container">
-            <img src="./images/img3.jpg" alt="img3">
+            <img src="./images/img3.jpg" alt="img3" data-aos="flip-left">
             <div class="text-box">
                 <div class="text-box-inner">
                     <h2>윤리경영</h2>
@@ -123,97 +102,15 @@
         </div>        
     </section>
 
-    <footer id="main-footer">
-        <div class="container">
-            <div class="menu-box">
-                <ul class="footer-menu">                    
-                    <li><a href="#">이용약관</a><span>|</span></li>
-                    <li><a href="#"><strong>개인정보처리방침</strong></a><span>|</span></li>
-                    <li><a href="#">전자입찰(협력사용)</a></li>         
-                </ul>
-                <ul class="sns-group">
-                    <li><a href="#"><img src="./images/ico_youtube.png" alt="YouTube"></a></li>
-                    <li><a href="#"><img src="./images/ico_insta.png" alt="insta"></a></li>
-                    <li><a href="#"><img src="./images/ico_facebook.png" alt="facebook"></a></li>
-                    <li><a href="#"><img src="./images/ico_kakaoP.png" alt="kakaop"></a></li>
-                    <li><a href="#"><img src="./images/ico_kakao.png" alt="kakao"></a></li>
-                </ul>
-            </div> <!-- menu-box -->       
-            <div class="line pc-only"></div>
-            <div class="footer-info">
-                <div class="footer-info-text">
-                    <p>서울시 종로구 종로 1길 50 더 케이 트윈타워 A동 </p>
-                    <p>대표전화 : 1588-1539</p>
-                    <p class="copy">Copyright(c) 2016 by Maeil Dairies Co.Ltd All rights reserved.</p>
-                </div>
-                <div class="sitemap-link pc-only">
-                    <button id="site-map-btn" class="pc-only">사이트맵</button>
-                        <select name="family-link" id="family-link">
-                            <option value="">패밀리사이트</option>
-                            <option value="">매일홀딩스</option>
-                            <option value="">매일헬스뉴트리션</option>
-                            <option value="">제로투세븐</option>
-                            <option value="">상하농원</option>
-                            <option value="">폴바셋(엠즈씨드)</option>
-                        </select>                        
-                </div>
-            </div><!-- footer-info -->            
-            <a href="#" class="top-btn"><img src="./images/top-btn.svg" alt="위로가기"></a>
-        </div> <!-- container -->
-        
-    </footer>
 
-    <!-- 사이트맵 레이어 팝업창 -->
-    <div class="sitemap-modal pc-only">
-        <ul>
-            <li><a href="#">회사소개</a>
-                <ul>
-                    <li><a href="#">기업소개</a></li>
-                    <li><a href="#">투자정보</a></li>
-                    <li><a href="#">인재채용</a></li>
-                </ul>
-            </li>
-            <li><a href="#">제품소개</a>
-                <ul>
-                    <li><a href="#">아기용</a></li>
-                    <li><a href="#">커피</a></li>
-                    <li><a href="#">우유</a></li>
-                    <li><a href="#">발효유</a></li>
-                    <li><a href="#">영양보조식</a></li>
-                    <li><a href="#">건강기능식품</a></li>
-                    <li><a href="#">음료</a></li>
-                    <li><a href="#">치즈</a></li>
-                    <li><a href="#">두유</a></li>
-                    <li><a href="#">크림,버터</a></li>
-                    <li><a href="#">특수,기타</a></li>
-                    <li><a href="#">가정배달제품</a></li>
-                </ul>
-            </li>
-            <li><a href="#">지속가능경영</a>
-                <ul>
-                    <li><a href="#">상생경영</a></li>
-                    <li><a href="#">윤리경영</a></li>
-                    <li><a href="#">가족친화경영</a></li>
-                    <li><a href="#">매일유업동반성장</a></li>
-                </ul>
-            </li>
-            <li><a href="#">IR</a>
-                <ul>
-                    <li><a href="#">경영정보</a></li>
-                    <li><a href="#">재무정보</a></li>
-                </ul>
-            </li>
-            <li><a href="#">PR</a>
-                <ul>
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">광고</a></li>
-                </ul>
-            </li>
-        </ul>
-        <button id="sitemap-modal-close">
-            <img src="./images/close-btn.svg" alt="닫기">
-        </button>
-    </div> <!--site map modal-->
-    
+    <!--푸터-->
+    <div class="footer-component">
+        <script src="./components/footer.js"></script>
+    </div>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
 </body>
 </html>
